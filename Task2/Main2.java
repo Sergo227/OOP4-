@@ -11,6 +11,21 @@ package Task2;
 
 public class Main2 {
     public static void main(String[] args) {
-        
+       Integer[] intArray = {2, 5, 7, 17};
+       String [] stringArray = {"Hello", "World"};
+       Double [] doubleArray = {2.2, 5.5, 7.7, 17.7};
+       printArray(intArray);
+       printArray(stringArray);
+       printArray(doubleArray);
+    }
+    public static <T> void printArray(T[] array){
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i != array.length - 1) {
+                System.out.print(",");
+            }
+        }
+        System.out.println("]");
     }
 }
